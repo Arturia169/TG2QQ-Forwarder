@@ -25,7 +25,7 @@
 ### 1. 环境准备
 1. **Telegram API**: 前往 [my.telegram.org](https://my.telegram.org) 获取 `API_ID` 和 `API_HASH`。
 2. **QQ 服务端**: 部署并开启 [NapCatQQ](https://github.com/NapNeko/NapCatQQ) 的 WebSocket 服务。
-3. **网络环境**: 准备一个 SOCKS5 代理用于连接 Telegram（默认端口 `7890`）。
+
 
 ### 2. 配置文件
 复制 `.env.example` 并重命名为 `.env`，填入相应参数：
@@ -43,3 +43,4 @@ TG_CHANNELS=[https://t.me/example_a,https://t.me/example_b](https://t.me/example
 NAPCAT_WS=ws://172.17.0.1:3001
 PROXY_HOST=172.17.0.1
 PROXY_PORT=7890
+
