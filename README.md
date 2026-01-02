@@ -39,17 +39,16 @@ NAPCAT_WS=ws://127.0.0.1:3001
 PROXY_HOST=172.17.0.1
 PROXY_PORT=7890
 
-3. 一键部署
-使用 Docker Compose 启动服务：
+### 3. 部署
 docker-compose up -d
 
+### 4.📂 项目结构说明
 文件,描述
 main.py,核心逻辑处理程序
 Dockerfile,容器镜像构建脚本
 docker-compose.yml,容器编排定义
 .env.example,环境变量模板文件
 .gitignore,隐私与缓存过滤清单
-
 
 看到你的预览图了，现在的文字确实挤在一起，缺乏视觉重点。在 GitHub 上，良好的排版（Markdown）能让项目看起来专业度倍增。
 
@@ -99,11 +98,11 @@ QQ_GROUP=987654321
 NAPCAT_WS=ws://127.0.0.1:3001
 PROXY_HOST=172.17.0.1
 PROXY_PORT=7890
-
 3. 一键部署
 使用 Docker Compose 启动服务：
-docker-compose up -d
 
+Bash
+docker-compose up -d
 📂 项目结构说明
 文件	描述
 main.py	核心逻辑处理程序
@@ -112,5 +111,5 @@ docker-compose.yml	容器编排定义
 .env.example	环境变量模板文件
 .gitignore	隐私与缓存过滤清单
 
-📜 许可证
+### 5.📜 许可证
 本项目采用 MIT License 开源协议。
