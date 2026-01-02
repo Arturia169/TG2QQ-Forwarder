@@ -1,0 +1,23 @@
+version: "3"
+services:
+    tg_forwarder:
+        # 使用当前目录下的 Dockerfile 进行构建
+        build: . 
+        container_name: tg_forwarder
+        restart: always
+        # 如果你的 NapCat 和代理在宿主机运行，host 模式是最简单的通信方式
+        network_mode: host
+        volumes:
+            - ./data:/app/data  # 映射数据目录，存放 session 文件和缓存媒体
+        environment:
+            # 这些变量会从你本地的 .env 文件中读取
+            - TG_API_ID=${TG_API_ID}
+            - TG_API_HASH=${TG_API_HASH}
+            - TG_CHANNELS=${TG_CHANNELS}
+            - QQ_GROUP=${QQ_GROUP}
+            - NAPCAT_WS=${NAPCAT_WS:-ws://127.0.0.1:3001}
+            - PROXY_HOST=${PROXY_HOST:-172.17.0.1}
+            - PROXY_PORT=${PROXY_PORT:-7890}
+            - PYTHONUNBUFFERED=1
+        # 直接运行程序，不再重复安装依赖
+        command: python main.py
