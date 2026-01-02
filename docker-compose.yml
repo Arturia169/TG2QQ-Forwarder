@@ -1,7 +1,6 @@
 version: "3"
 services:
     tg_forwarder:
-        # 使用当前目录下的 Dockerfile 进行构建
         build: . 
         container_name: tg_forwarder
         restart: always
@@ -19,5 +18,4 @@ services:
             - PROXY_HOST=${PROXY_HOST:-172.17.0.1}
             - PROXY_PORT=${PROXY_PORT:-7890}
             - PYTHONUNBUFFERED=1
-        # 直接运行程序，不再重复安装依赖
         command: python main.py
