@@ -24,9 +24,6 @@ TG2QQ-Forwarder
 
 2. 配置环境
 克隆仓库后，将 .env.example 复制并重命名为 .env，填入你的参数：
-
-Ini, TOML
-
 TG_API_ID=你的API_ID
 TG_API_HASH=你的API_HASH
 TG_CHANNELS=https://t.me/频道A,https://t.me/频道B
@@ -34,21 +31,16 @@ QQ_GROUP=接收消息的QQ群号
 NAPCAT_WS=ws://127.0.0.1:3001
 PROXY_HOST=172.17.0.1
 PROXY_PORT=7890
+
 3. Docker 部署
 使用 Docker Compose 启动：
-
-Bash
-
 docker-compose up -d
+
 📂 项目结构
 main.py: 核心逻辑处理。
-
 Dockerfile: 镜像构建定义。
-
 docker-compose.yml: 多容器定义。
-
 .env.example: 环境变量模板。
-
 .gitignore: 隐私过滤清单。
 
 ⚖️ 许可证
